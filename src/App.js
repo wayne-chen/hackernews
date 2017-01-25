@@ -21,23 +21,23 @@ const list = [
 ];
 
 class App extends Component {
-  render() {
-    return (
-        <div className="App">
-            {
-                list.map(function(item){
-                    return (
+
+     
+    render() {
+        return (
+            <div className="App">
+                {
+                    list.map(item =>
                         <div key={item.objectID}>
                             <div><a href={item.url}>{item.title}</a></div>
                             <div>Authors: {item.author}</div>
                             <div>Comments({item.num_comments})</div>
                             <div>{item.points} points</div>
                         </div>
-                    );
-                })}
-        </div>
-    );
-  }
+                )}
+            </div>
+        );
+    }
 }
 
 export default App;
